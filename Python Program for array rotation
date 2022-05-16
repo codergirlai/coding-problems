@@ -1,4 +1,8 @@
-# function to rotate array by d elements using temp array
+# Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements. 
+
+  Input arr[] = [1, 2, 3, 4, 5, 6, 7], d = 2, n =7
+
+// Code Explanaation 
 def reverse(arr,low,high):
     while(low <  high):
         arr[high], arr[low] = arr[low], arr[high]
@@ -12,9 +16,8 @@ def circularArrayRotation(a, k, queries):
     ans3 = reverse(ans1,0,len(ans1)-1)
     return ans3    
  
-# Driver function to test above function
 arr = [1, 2, 3, 4, 5, 6, 7]
-print("Array after left rotation is: ", end=' ')
-print(rotateArray(arr, len(arr), 2))
- 
-# this code is contributed by Anabhra Tyagi
+circularArrayRotation(arr, 2, 7)
+
+
+output : [3, 4, 5, 6, 7, 1, 2] 
