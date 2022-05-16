@@ -1,0 +1,20 @@
+# function to rotate array by d elements using temp array
+def reverse(arr,low,high):
+    while(low <  high):
+        arr[high], arr[low] = arr[low], arr[high]
+        low = low + 1
+        high = high - 1
+    return arr 
+    
+def circularArrayRotation(a, k, queries):
+    reverse(a,0,k-1)
+    ans1 = reverse(a,k,len(arr)-1)
+    ans3 = reverse(ans1,0,len(ans1)-1)
+    return ans3    
+ 
+# Driver function to test above function
+arr = [1, 2, 3, 4, 5, 6, 7]
+print("Array after left rotation is: ", end=' ')
+print(rotateArray(arr, len(arr), 2))
+ 
+# this code is contributed by Anabhra Tyagi
