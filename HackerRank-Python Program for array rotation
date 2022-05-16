@@ -1,0 +1,23 @@
+# Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements. 
+
+  Input arr[] = [1, 2, 3, 4, 5, 6, 7], d = 2, n =7
+
+// Code Explanation 
+def reverse(arr,low,high):
+    while(low <  high):
+        arr[high], arr[low] = arr[low], arr[high]
+        low = low + 1
+        high = high - 1
+    return arr 
+    
+def circularArrayRotation(a, k, queries):
+    reverse(a,0,k-1)
+    firstrev = reverse(a,k,len(arr)-1)
+    secondrev = reverse(firstrev,0,len(firstrev)-1)
+    return secondrev    
+ 
+arr = [1, 2, 3, 4, 5, 6, 7]
+circularArrayRotation(arr, 2, 7)
+
+
+output : [3, 4, 5, 6, 7, 1, 2] 
