@@ -1,0 +1,12 @@
+def powerSum(X, N, num):
+    value = X - num**N
+    if value < 0:
+        return 0
+    elif value == 0:
+        return 1
+    else:
+        return powerSum(value, N, num+1) + powerSum(X, N, num+1)
+
+
+x,n = 10,2
+print(powerSum(x, n,1))
